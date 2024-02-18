@@ -1,0 +1,15 @@
+
+get:
+  tags:
+    - sports
+  summary: Get all sports.
+  operationId: getAllSports
+  responses:
+    '200':
+      description: A list of sports.
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: './../../bmon-odds.yaml#/components/schemas/SportDto'

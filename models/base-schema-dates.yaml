@@ -1,0 +1,9 @@
+type: object
+description: Holds created_at and updated_at auto generated columns.
+properties:
+  created_at:
+    type: string
+    format: date-time
+  updated_at:
+    type: string
+    format: date-time

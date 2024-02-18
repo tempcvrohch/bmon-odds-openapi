@@ -1,0 +1,13 @@
+type: object
+description: A request body for a user registration
+required:
+  - stake
+properties:
+  username:
+    type: string
+    minLength: 6
+    maxLength: 32
+  password:
+    type: string
+    minLength: 6
+    maxLength: 32

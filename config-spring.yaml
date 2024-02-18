@@ -1,0 +1,11 @@
+useSpringBoot3: true
+serializableModel: true
+apiPackage: com.rohanc.bmonoddsserver.api
+modelPackage: com.rohanc.bmonoddsserver.models.dto
+interfaceOnly: true
+modelPropertyNaming: true
+unhandledException: true
+requestMappingMode: api_interface
+useResponseEntity: false
+importMappings: 
+  LeagueDto: com.rohanc.bmonoddsserver.models.dto.LeagueDto

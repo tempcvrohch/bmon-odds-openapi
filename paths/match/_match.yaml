@@ -1,0 +1,19 @@
+post:
+  tags:
+    - match
+  summary: Create a new match
+  operationId: createMatch
+  responses:
+    '200':
+      description: A match, matchState and marketStates were successfully created.
+      content:
+        application/json:
+          schema:
+            $ref: './../../bmon-odds.yaml#/components/schemas/MatchDto'
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: './../../requests/match/match-upsert-dto.yaml'
+    required: true
+

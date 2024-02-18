@@ -1,0 +1,17 @@
+get:
+  tags:
+    - user
+    - auth
+  summary: Get current logged-in user.
+  operationId: getUserSession
+  responses:
+    '200':
+      description: a user is logged in and was returned.
+      content:
+        application/json:
+          schema:
+            $ref: './../../bmon-odds.yaml#/components/schemas/UserDto'
+    '401':
+      description: the user was not logged in
+    '403':
+      description: the user account has been closed

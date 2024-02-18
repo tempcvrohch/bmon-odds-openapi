@@ -1,0 +1,19 @@
+allOf:
+  - $ref: './base-schema-id.yaml'
+  - $ref: './base-schema-dates.yaml'
+  - type: object
+    description: A wager placed by a user on a marketState. 
+    required:
+      - stake
+      - status
+    properties:
+      stake:
+        type: integer
+        minimum: 0
+      status:
+        $ref: './../bmon-odds.yaml#/components/schemas/BetStatusDto'
+      toReturn:
+        type: number
+        format: float
+      marketState:
+        $ref: './../bmon-odds.yaml#/components/schemas/MarketStateDto'

@@ -1,0 +1,10 @@
+allOf:
+  - $ref: './base-schema-id.yaml'
+  - $ref: './base-schema-dates.yaml'
+  - type: object
+    description: Sport listing available markets.
+    required:
+      - name
+    properties:
+      name:
+        type: string

@@ -1,0 +1,4 @@
+optionalProjectFile: false
+optionalAssemblyInfo: false
+nullableReferenceTypes: true
+library: restsharp

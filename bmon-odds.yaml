@@ -1,0 +1,82 @@
+openapi: 3.0.0
+servers:
+  - url: 'http://petstore.swagger.io/v2'
+info:
+  description: >-
+    The server for simulating a betting portal.
+  version: 1.0.0
+  title: BetMonitor for generating matches and Odds
+  license:
+    name: Apache-2.0
+    url: 'https://www.apache.org/licenses/LICENSE-2.0.html'
+tags:
+  - name: user
+    description: A registered user
+paths:
+  /auth/register:
+    $ref: './paths/auth/register.yaml'
+  /auth/session:
+    $ref: './paths/auth/session.yaml'
+  /user/bets/pending:
+    $ref: './paths/user/bets-pending.yaml'
+  /bet/place/{marketStateId}:
+    $ref: './paths/bet/place.yaml'
+  /match:
+    $ref: './paths/match/_match.yaml'
+  /match/{id}:
+    $ref: './paths/match/id.yaml'
+  /match/{id}/markets/latest:  
+    $ref: './paths/match/markets-latest.yaml'
+  /matches:
+    $ref: './paths/matches/_matches.yaml'
+  /matches/recent:
+    $ref: './paths/matches/recent.yaml'
+  /leagues:
+    $ref: './paths/leagues/_leagues.yaml'
+  /players:
+    $ref: './paths/players/_players.yaml'
+  /sports:
+    $ref: './paths/sports/_sports.yaml'
+
+components:
+  schemas:
+    LeagueDto:
+      $ref: './models/league-dto.yaml'
+    PlayerDto:
+      $ref: './models/player-dto.yaml' 
+    SportDto:
+      $ref: './models/sport-dto.yaml'
+    MatchDto:
+      $ref: './models/match-dto.yaml'
+    MatchStateDto:
+      $ref: './models/match-state-dto.yaml'
+    MarketDto:
+      $ref: './models/market-dto.yaml'
+    MarketStateDto:
+      $ref: './models/market-state-dto.yaml'
+    BetStatusDto:
+      $ref: './models/bet-status-dto.yaml'
+    BetDto:
+      $ref: './models/bet-dto.yaml'
+    UserDto:
+      $ref: './models/user-dto.yaml'     
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      

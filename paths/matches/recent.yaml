@@ -1,0 +1,14 @@
+get:
+  tags:
+    - matches
+  summary: Get recent matches.
+  operationId: getRecentMatches
+  responses:
+    '200':
+      description: a list of recent matches.
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: './../../bmon-odds.yaml#/components/schemas/MatchDto'

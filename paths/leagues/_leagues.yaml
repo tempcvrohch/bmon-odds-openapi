@@ -1,0 +1,14 @@
+get:
+  tags:
+    - leagues
+  summary: Get all leagues.
+  operationId: getAllLeagues
+  responses:
+    '200':
+      description: a list of leagues
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: './../../models/league-dto.yaml'

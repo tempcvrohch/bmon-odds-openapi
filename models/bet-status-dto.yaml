@@ -1,0 +1,6 @@
+type: string
+enum:
+  - WIN
+  - LOSS
+  - PENDING
+  - VOID

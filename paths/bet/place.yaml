@@ -1,0 +1,28 @@
+post:
+  tags:
+    - bet
+  summary: Place a wager.
+  operationId: placeBet
+  parameters:
+    - name: marketStateId
+      in: path
+      description: Id of the market state to place the bet on.
+      required: true
+      schema:
+        type: integer
+        format: int64
+  responses:
+    '200':
+      description: A bet was successfully placed and balance was substracted.
+      content:
+        application/json:
+          schema:
+            $ref: './../../bmon-odds.yaml#/components/schemas/BetDto'
+    '400':
+      description: The bet was already placed or insufficient funds or stake out of bounds or unknown market.
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: './../../requests/bet/bet-place-dto.yaml'
+    required: true

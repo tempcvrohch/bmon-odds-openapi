@@ -1,0 +1,42 @@
+get:
+  tags:
+    - match
+  summary: Get match on id.
+  operationId: getMatchById
+  parameters:
+    - name: id
+      in: path
+      description: Id of match to return.
+      required: true
+      schema:
+        type: integer
+        format: int64
+  responses:
+    '200':
+      description: the found match
+      content:
+        application/json:
+          schema:
+            $ref: './../../bmon-odds.yaml#/components/schemas/MatchDto'
+put:
+  tags:
+    - match
+  summary: Update a live match with a new matchState
+  operationId: updateMatchAndStates
+  parameters:
+    - name: id
+      in: path
+      description: Id of match to update.
+      required: true
+      schema:
+        type: integer
+        format: int64
+  responses:
+    '200':
+      description: The match was updated and new matchstate and marketstates inserted.
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: './../../requests/match/match-upsert-dto.yaml'
+    required: true

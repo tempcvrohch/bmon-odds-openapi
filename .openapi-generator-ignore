@@ -1,0 +1,9 @@
+**/pom.xml
+**/.openapi-generator-ignore
+**/README.md
+**/BaseSchema*.java
+**/.gitignore
+**/appveyor.yml
+**/git_push.sh
+**/Org.OpenAPITools.sln
+**/Org.OpenAPITools.Test/

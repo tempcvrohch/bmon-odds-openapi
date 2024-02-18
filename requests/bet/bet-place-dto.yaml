@@ -1,0 +1,12 @@
+type: object
+description: A request body of a wager placed by a user on a marketState.
+required:
+  - stake
+  - marketStateId
+properties:
+  stake:
+    type: integer
+    minimum: 0
+  marketStateId:
+    type: integer
+    format: int64

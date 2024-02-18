@@ -1,0 +1,22 @@
+allOf:
+  - $ref: './base-schema-id.yaml'
+  - $ref: './base-schema-dates.yaml'
+  - type: object
+    description: Match between players with markets.
+    required:
+      - name
+    properties:
+      name:
+        type: string
+      live:
+        type: boolean
+      league: 
+        $ref: './../bmon-odds.yaml#/components/schemas/LeagueDto'
+      sport:
+        $ref: './../bmon-odds.yaml#/components/schemas/SportDto'
+      matchState:
+        $ref: './../bmon-odds.yaml#/components/schemas/MatchStateDto'
+      matchStates:
+        type: array
+        items:
+          $ref: './../bmon-odds.yaml#/components/schemas/MatchStateDto'

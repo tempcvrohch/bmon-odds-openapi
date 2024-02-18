@@ -1,0 +1,17 @@
+get:
+  tags:
+    - user
+    - bets
+  summary: Get user pending bets.
+  operationId: getUserBetsPending
+  responses:
+    '200':
+      description: The list of bets that are pending.
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: './../../bmon-odds.yaml#/components/schemas/BetDto'
+    '401':
+      description: The user was not logged in.

@@ -1,0 +1,10 @@
+allOf:
+  - $ref: './base-schema-id.yaml'
+  - $ref: './base-schema-dates.yaml'
+  - type: object
+    description: Market category for a bet.
+    required:
+      - name
+    properties:
+      name:
+        type: string

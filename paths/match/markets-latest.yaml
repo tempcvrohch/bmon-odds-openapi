@@ -1,0 +1,22 @@
+get:
+  tags:
+    - markets
+  summary: Get the latest market states on match.
+  operationId: getLatestMarketsByMatchId
+  parameters:
+    - name: id
+      in: path
+      description: id of the match
+      required: true
+      schema:
+        type: integer
+        format: int64
+  responses:
+    '200':
+      description: the latest markets
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: './../../bmon-odds.yaml#/components/schemas/MarketStateDto'

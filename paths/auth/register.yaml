@@ -1,0 +1,23 @@
+post:
+  tags:
+    - user
+    - auth
+  summary: register a new user.
+  operationId: register
+  responses:
+    '200':
+      description: a user is logged in and was returned.
+      content:
+        application/json:
+          schema:
+            $ref: './../../bmon-odds.yaml#/components/schemas/UserDto'
+    '400':
+      description: the username/password has invalid length.
+    '409':
+      description: username was taken
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: './../../requests/user/user-register-dto.yaml'
+    required: true

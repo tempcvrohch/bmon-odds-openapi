@@ -1,0 +1,22 @@
+allOf:
+  - $ref: './base-schema-id.yaml'
+  - $ref: './base-schema-dates.yaml'
+  - type: object
+    description: A change during a match, most likely in points.
+    required:
+      - point_score
+      - serving_index
+      - set_score
+    properties:
+      pointScore:
+        type: string
+      servingIndex:
+        type: integer
+        minimum: 0
+        maximum: 1
+      setScore:
+        type: string
+      marketStates:
+        type: array
+        items:
+          $ref: './../bmon-odds.yaml#/components/schemas/MarketStateDto'

@@ -1,0 +1,14 @@
+get:
+  tags:
+    - players
+  summary: Get all players.
+  operationId: getAllPlayers
+  responses:
+    '200':
+      description: a list of players.
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: './../../bmon-odds.yaml#/components/schemas/PlayerDto'
