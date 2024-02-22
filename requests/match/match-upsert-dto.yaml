@@ -9,6 +9,9 @@ required:
   - matchState
   - playerIds
 properties:
+  id:
+    type: integer
+    format: int64
   name:
     type: string
   live:

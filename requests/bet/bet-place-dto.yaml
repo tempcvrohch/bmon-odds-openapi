@@ -5,7 +5,8 @@ required:
   - marketStateId
 properties:
   stake:
-    type: integer
+    type: number
+    format: float
     minimum: 0
   marketStateId:
     type: integer
