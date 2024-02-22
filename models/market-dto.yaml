@@ -5,6 +5,18 @@ allOf:
     description: Market category for a bet.
     required:
       - name
+      - odd
+      - stakeLimit
     properties:
       name:
         type: string
+      odd:
+        type: number
+        format: float
+      stakeLimit:
+        type: number
+        format: float
+      market:
+        $ref: './../bmon-odds.yaml#/components/schemas/MarketDto'
+      player:
+        $ref: './../bmon-odds.yaml#/components/schemas/PlayerDto'

@@ -18,3 +18,8 @@ allOf:
       stakeLimit:
         type: integer
         minimum: 0
+      marketStates:
+        type: array
+        items:
+          $ref: './../bmon-odds.yaml#/components/schemas/MarketStateDto'
+          
