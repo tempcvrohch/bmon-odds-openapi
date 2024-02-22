@@ -26,8 +26,8 @@ function fix_dupes(){
 	done
 }
 
-if [ -d "../${frontend_dir}" ] && [ -d "./out/react" ]; then
-	rsync -rv "./out/react" "../${frontend_dir}/src/"
+if [ -d "../${frontend_dir}" ] && [ -d "./out/typescript" ]; then
+	rsync -rv "./out/typescript/." "../${frontend_dir}/src/openapi"
 	echo "Updated frontend project with new openapi definitions"
 fi
 

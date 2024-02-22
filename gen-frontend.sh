@@ -2,13 +2,13 @@
 
 set -e
 
-rm -rf out/csharp
+rm -rf out/typescript
 
 docker run --rm \
 	-v "${PWD}:/local" \
 	openapitools/openapi-generator-cli generate \
 	-i /local/bmon-odds.yaml \
-	-c /local/config-csharp.yaml \
+	-c /local/config-typescript.yaml \
 	--ignore-file-override /local/.openapi-generator-ignore \
-	-g csharp \
-	-o /local/out/csharp
+	-g typescript-fetch \
+	-o /local/out/typescript
