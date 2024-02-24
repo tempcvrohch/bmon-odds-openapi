@@ -10,13 +10,3 @@ allOf:
     properties:
       name:
         type: string
-      odd:
-        type: number
-        format: float
-      stakeLimit:
-        type: number
-        format: float
-      market:
-        $ref: './../bmon-odds.yaml#/components/schemas/MarketDto'
-      player:
-        $ref: './../bmon-odds.yaml#/components/schemas/PlayerDto'

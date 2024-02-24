@@ -4,6 +4,12 @@ post:
     - auth
   summary: register a new user.
   operationId: register
+  parameters:
+    - name: X-XSRF-TOKEN
+      in: header
+      required: true
+      schema:
+        type: string
   responses:
     '200':
       description: a user is logged in and was returned.

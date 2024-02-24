@@ -44,3 +44,5 @@ if [ -d "../${oddsgen_dir}" ] && [ -d "./out/csharp" ]; then
 	rsync -rv "./out/csharp/." "../${oddsgen_dir}/"
 	echo "Updated oddsgen project with new openapi definitions"
 fi
+
+rm -rf ./out/*

@@ -4,6 +4,11 @@ post:
   summary: Place a wager.
   operationId: placeBet
   parameters:
+    - name: X-XSRF-TOKEN
+      required: true
+      in: header
+      schema:
+        type: string
     - name: marketStateId
       in: path
       description: Id of the market state to place the bet on.

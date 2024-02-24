@@ -3,6 +3,12 @@ post:
     - match
   summary: Create a new match
   operationId: createMatch
+  parameters:
+    - name: X-XSRF-TOKEN
+      required: true
+      in: header
+      schema:
+        type: string
   responses:
     '200':
       description: A match, matchState and marketStates were successfully created.

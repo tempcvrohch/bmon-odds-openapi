@@ -1,6 +1,6 @@
 allOf:
-  - $ref: './base-schema-id.yaml'
-  - $ref: './base-schema-dates.yaml'
+  - $ref: "./base-schema-id.yaml"
+  - $ref: "./base-schema-dates.yaml"
   - type: object
     description: A change in odds of a market, mostly comes in paires.
     required:
@@ -18,8 +18,7 @@ allOf:
       stakeLimit:
         type: integer
         minimum: 0
-      marketStates:
-        type: array
-        items:
-          $ref: './../bmon-odds.yaml#/components/schemas/MarketStateDto'
-          
+      market:
+        $ref: "./../bmon-odds.yaml#/components/schemas/MarketDto"
+      player:
+        $ref: "./../bmon-odds.yaml#/components/schemas/PlayerDto"

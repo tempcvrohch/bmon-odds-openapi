@@ -24,6 +24,11 @@ put:
   summary: Update a live match with a new matchState
   operationId: updateMatchAndStates
   parameters:
+    - name: X-XSRF-TOKEN
+      required: true
+      in: header
+      schema:
+        type: string
     - name: id
       in: path
       description: Id of match to update.

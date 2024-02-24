@@ -5,13 +5,8 @@ allOf:
     description: A registered user.
     required:
       - username
-      - password
     properties:
       username:
-        type: string
-        minLength: 6
-        maxLength: 32
-      password:
         type: string
         minLength: 6
         maxLength: 32
